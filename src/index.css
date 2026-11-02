@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-accent: 'Fraunces', Georgia, serif;
+  --font-body: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --color-cream: #FBF6E9;
+  --color-yellow: #F6CD3B;
+  --color-yellow-100: #FBE9A0;
+  --color-blue: #2F4BDB;
+  --color-blue-100: #DCE3FA;
+  --color-pink: #F4A7C3;
+  --color-pink-100: #FBDDE8;
+  --color-ink: #14183A;
+}
+
+:root {
+  --cream: #FBF6E9;
+  --yellow: #F6CD3B;
+  --yellow-100: #FBE9A0;
+  --blue: #2F4BDB;
+  --blue-100: #DCE3FA;
+  --pink: #F4A7C3;
+  --pink-100: #FBDDE8;
+  --ink: #14183A;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background-color: var(--cream);
+}
+
+/* Custom hard offset shadow - strictly solid ink, no blur */
+.shadow-hard {
+  box-shadow: 3px 3px 0 #14183A;
+}
+
+.shadow-hard-sm {
+  box-shadow: 2px 2px 0 #14183A;
+}
+
+.shadow-hard-lg {
+  box-shadow: 4px 4px 0 #14183A;
+}
+
+/* Image styling filter requested: saturate 1.05, contrast 1.02 */
+.momo-img {
+  filter: saturate(1.05) contrast(1.02);
+}
+
+/* Marquee continuous scroll animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FBF6E9;
+}
+::-webkit-scrollbar-thumb {
+  background: #14183A;
+  border-radius: 4px;
+}

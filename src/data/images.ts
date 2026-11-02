@@ -1,0 +1,250 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+export interface ProductImage {
+  id: string;
+  url: string;
+  secondaryUrl?: string;
+  alt: string;
+  aspectRatio: '4:5' | '16:10' | '1:1';
+  placeholderColor: '#FBDDE8' | '#FBE9A0' | '#DCE3FA'; // pink-100, yellow-100, blue-100
+}
+
+export const IMAGES = {
+  // Hero & Banners
+  heroMain: {
+    id: 'hero-main',
+    url: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80',
+    secondaryUrl: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Handmade ceramic cups and crafted notebook in warm sunlight',
+    aspectRatio: '16:10' as const,
+    placeholderColor: '#FBDDE8' as const,
+  },
+  heroTile1: {
+    id: 'hero-tile-1',
+    url: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80',
+    alt: 'Dotted linen bound notebook and brass pen',
+    aspectRatio: '1:1' as const,
+    placeholderColor: '#FBE9A0' as const,
+  },
+  heroTile2: {
+    id: 'hero-tile-2',
+    url: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=600&q=80',
+    alt: 'Sculptural terracotta bud vase with botanical branch',
+    aspectRatio: '1:1' as const,
+    placeholderColor: '#DCE3FA' as const,
+  },
+  heroTile3: {
+    id: 'hero-tile-3',
+    url: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80',
+    alt: 'Heavyweight organic cotton canvas tote',
+    aspectRatio: '1:1' as const,
+    placeholderColor: '#FBDDE8' as const,
+  },
+  brandStory: {
+    id: 'brand-story',
+    url: 'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=900&q=80',
+    secondaryUrl: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80',
+    alt: 'Ceramicist glazing small cups in sunlit workshop',
+    aspectRatio: '16:10' as const,
+    placeholderColor: '#DCE3FA' as const,
+  },
+
+  // 24 Products
+  products: {
+    'tuesday-mug': {
+      id: 'tuesday-mug',
+      url: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&w=800&q=80',
+      alt: 'The Tuesday Mug in speckled buttercup yellow glaze',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBE9A0' as const,
+    },
+    'pocket-pal-notebook': {
+      id: 'pocket-pal-notebook',
+      url: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80',
+      alt: 'Pocket Pal Notebook in French blue textured cloth',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#DCE3FA' as const,
+    },
+    'big-feelings-tote': {
+      id: 'big-feelings-tote',
+      url: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?auto=format&fit=crop&w=800&q=80',
+      alt: 'Big Feelings Tote in natural heavyweight ecru canvas',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBDDE8' as const,
+    },
+    'wobbly-bud-vase': {
+      id: 'wobbly-bud-vase',
+      url: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=800&q=80',
+      alt: 'Wobbly Bud Vase in soft petal pink ceramic',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBDDE8' as const,
+    },
+    'perpetual-brass-ruler': {
+      id: 'perpetual-brass-ruler',
+      url: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80',
+      alt: 'Solid machined brass 20cm ruler with etched metrics',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBE9A0' as const,
+    },
+    'cloud-catch-all-dish': {
+      id: 'cloud-catch-all-dish',
+      url: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80',
+      alt: 'Glazed porcelain catch-all tray for keys and rings',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#DCE3FA' as const,
+    },
+    'morning-routine-mug': {
+      id: 'morning-routine-mug',
+      url: 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&w=800&q=80',
+      alt: 'Chunky handle ceramic mug in cobalt dipped glaze',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#DCE3FA' as const,
+    },
+    'daily-focus-notepad': {
+      id: 'daily-focus-notepad',
+      url: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80',
+      alt: 'Grid printed daily planner pad with heavyweight tear-off sheets',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBE9A0' as const,
+    },
+    'little-sun-lamp': {
+      id: 'little-sun-lamp',
+      url: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80',
+      alt: 'Small warm LED portable dome desk lamp in sunny yellow',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBE9A0' as const,
+    },
+    'squiggle-paperweight': {
+      id: 'squiggle-paperweight',
+      url: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80',
+      alt: 'Cast iron wavy paperweight in matte ink navy finish',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBDDE8' as const,
+    },
+    'matchbox-sticky-notes': {
+      id: 'matchbox-sticky-notes',
+      url: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+      alt: 'Set of 3 matchbox drawer memo note sets with colored edges',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBE9A0' as const,
+    },
+    'canvas-market-hauler': {
+      id: 'canvas-market-hauler',
+      url: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+      alt: 'Extra wide market hauler tote with double stitched handles',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#DCE3FA' as const,
+    },
+    'dotted-habit-journal': {
+      id: 'dotted-habit-journal',
+      url: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80',
+      alt: 'Hardcover smyth-sewn dot grid journal in warm blush pink',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBDDE8' as const,
+    },
+    'cobalt-espresso-cup': {
+      id: 'cobalt-espresso-cup',
+      url: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80',
+      alt: 'Pair of ceramic espresso cups in deep Yves Klein blue',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#DCE3FA' as const,
+    },
+    'chunky-tape-dispenser': {
+      id: 'chunky-tape-dispenser',
+      url: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=800&q=80',
+      alt: 'Weighted terrazzo tape dispenser with stainless serrated blade',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBE9A0' as const,
+    },
+    'soft-grid-pen-pouch': {
+      id: 'soft-grid-pen-pouch',
+      url: 'https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+      alt: 'Quilted grid zippered pen case in cheerful dandelion yellow',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBE9A0' as const,
+    },
+    'checkerboard-coaster-set': {
+      id: 'checkerboard-coaster-set',
+      url: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80',
+      alt: 'Set of four ceramic cork-backed coasters in ink and cream checker',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#DCE3FA' as const,
+    },
+    'half-moon-bookends': {
+      id: 'half-moon-bookends',
+      url: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80',
+      alt: 'Pair of solid powder-coated steel half-moon bookends',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBDDE8' as const,
+    },
+    'sunday-morning-incense-holder': {
+      id: 'sunday-morning-incense-holder',
+      url: 'https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80',
+      alt: 'Sculptural stone pebble incense dish with brass insert',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBE9A0' as const,
+    },
+    'squash-scissors': {
+      id: 'squash-scissors',
+      url: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80',
+      alt: 'Japanese crafted precision craft scissors with rounded rubberized grips',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#DCE3FA' as const,
+    },
+    'warm-welcome-key-dish': {
+      id: 'warm-welcome-key-dish',
+      url: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80',
+      alt: 'Warm terra-cotta oval entryway tray with soft lip',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBDDE8' as const,
+    },
+    'linen-lunch-sack': {
+      id: 'linen-lunch-sack',
+      url: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?auto=format&fit=crop&w=800&q=80',
+      alt: 'Washed European flax linen roll-top lunch pouch with horn button',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBE9A0' as const,
+    },
+    'midnight-arc-lamp': {
+      id: 'midnight-arc-lamp',
+      url: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80',
+      alt: 'Curved matte metal reading lamp with rotatable head',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#DCE3FA' as const,
+    },
+    'good-posture-cushion': {
+      id: 'good-posture-cushion',
+      url: 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80',
+      secondaryUrl: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80',
+      alt: 'Ergonomic wool bouclé round desk seat cushion',
+      aspectRatio: '4:5' as const,
+      placeholderColor: '#FBDDE8' as const,
+    },
+  },
+};

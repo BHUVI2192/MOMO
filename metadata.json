@@ -1,0 +1,6 @@
+{
+  "name": "MOMO — Small objects for good moods",
+  "description": "Everyday things, made happier. A curated e-commerce store for stationery, desk objects, ceramics, tote bags, and homeware.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
